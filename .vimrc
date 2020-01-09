@@ -1,5 +1,3 @@
-execute pathogen#infect()
-
 set noswapfile
 
 set incsearch
@@ -30,6 +28,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'jiangmiao/auto-pairs'
 Plug 'airblade/vim-gitgutter'
+Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 
 call plug#end()
 
