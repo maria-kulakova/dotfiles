@@ -49,15 +49,6 @@ vnoremap y "+y
 "Ag
 let g:ag_working_path_mode="r"
 
-" restart rails servers
-function! RestartServers()
-execute system("tmux send-keys -t 1.left C-c \" bundle exec rails s\" C-m")
-execute system("tmux send-keys -t 2.left C-c \" bundle exec rails s -p 3001\" C-m")
-execute system("tmux send-keys -t 2.right C-c \" bundle exec sidekiq\" C-m")
-echo "Servers reloaded"
-endfunction
-nnoremap q :call RestartServers()
-
 function! RemoveSwapFiles()
   let find_delete = "find . -type f -name '.*.sw*' -delete"
 
